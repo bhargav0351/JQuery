@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up and Down</title>
+    <style>
+        p
+        {
+            font-size: 25px;
+        }
+        .bhargav
+        {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button class="Show">Up</button>
+    <button class="Hide">Down</button>
+    <button class="Toggle">Toggle</button>
+    <div class="bhargav">
+        <p class="bhargav">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corporis inventore esse voluptatem quae natus harum accusamus rem amet ea vitae libero perferendis aut autem, aliquam, ipsam maxime aperiam veniam!</p>
+    </div>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $("body").css({ 
+            backgroundColor: "#FFA07A",
+            textAlign: "center"
+        });
+        $("button").css({
+          backgroundColor: "#F08080",
+          color: "khaki",
+          padding: "10px 30px",
+          margin: "20px"
+        });
+        $(".bhargav").css({
+          backgroundColor: "teal",
+          color: "khaki",
+          width: "600px",
+          height: "400px",
+          margin: "auto"
+        });
+        $("p").css({
+            padding: "10px 0px"
+        });
+      </script>
+
+      <script>
+        $(document).ready (function () 
+        {
+            $('.Show').click(function () 
+            {
+               $('.bhargav').slideUp() 
+            });
+            $('.Hide').click(function () 
+            {
+               $('.bhargav').slideDown() 
+            });
+            $('.Toggle').click(function () 
+            {
+               $('.bhargav').slideToggle() 
+            });
+        });
+      </script>
+
+</body>
+</html>

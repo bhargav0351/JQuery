@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeckt</title>
+    <style>
+        /* .box
+        {
+            border: 2px solid black;
+            background-color: red;
+            height: 400px;
+        } */
+    </style>
+</head>
+<body>
+    <script src="./../jquery-3.7.1.min.js"></script>
+    <div class="box"> 
+      box1
+    </div>
+
+    <button class="In">fade In</button>
+    <button class="Out">fade Out</button>
+    <button class="Toggle">fade Toggle</button>
+    <button class="To">fade To</button>
+
+    <script>
+      $(document).ready(function () {
+        $('.In').click(function () {
+           $('.box').fadeIn(1000) 
+        });
+        $('.Out').click(function () {
+           $('.box').fadeOut(1000) 
+        });
+        $('.Toggle').click(function () {
+           $('.box').fadeToggle(1000) 
+        });
+        $('.To').click(function () {
+           $('.box').fadeTo(1000) 
+        });
+      });
+    </script>
+</body>
+</html>
