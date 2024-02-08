@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Traversing In jQuery</title>
+  </head>
+  <body>
+  
+        <div class="parent">
+          parent
+          <div class="child hey">Child One</div>
+          <div class="child">Child Two</div>
+          <div class="child hey">Child Three</div>
+        </div>
+      
+    <!-- jQuery -->
+
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- Script In Which we are including jquery CSS  -->
+
+    <script>
+      $("*").css({
+        backgroundColor: "tan",
+        textAlign: "center",
+        margin: "25px",
+        fontSize: "30px",
+      });
+    </script>
+
+    <!-- script -->
+
+    <script>
+      $(document).ready(function () {
+
+        $(".child").siblings().css({ 
+            border: "3px solid teal",
+            backgroundColor: "red"
+        });
+
+        $(".child").filter('.hey').css({ 
+            border: "3px solid black",
+            backgroundColor: "pink" });
+      });
+    </script>
+  </body>
+</html>

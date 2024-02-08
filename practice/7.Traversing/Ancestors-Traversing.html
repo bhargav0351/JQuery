@@ -13,18 +13,20 @@
             Grandparent
             <li class="parent">
                 Parent
-                <span class="chlid1">
-                    span
-                </span>
             </li>
         </ul>
     </div>
 
-    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-3.7.1.min.js"></script>
 
     <script>
-        $('span').parents().css({border: '3px solid red' , padding: '20px', listStyleType: 'none' , margin : '0' , width : '90%'});
-        $(".chlid1").css({border: '3px solid #d9d9d9'});
+        $('li').parents().css({border: '3px solid red' ,
+         padding: '20px',
+         listStyleType: 'none' , 
+         margin : '0' , 
+         width : '90%'});
+
+        $(".parent").css({border: '3px solid #d9d9d9'});
     </script>
 </body>
 </html>
